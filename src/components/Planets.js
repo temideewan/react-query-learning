@@ -37,7 +37,7 @@ const Planets = () => {
         const uidOfLastPaginatedPage = data.results[lastElementOfEachPage -1].uid;
         const check = uidOfLastPaginatedPage === lastElementUid;
         return setPage((old) => check? old: old+1)}}
-      disabled={data.results[page* 10 -1].uid === data.results[data.results.length-1].uid }>
+      disabled={data? data.results[page* 10 -1].uid === data.results[data.results.length-1].uid: false }>
         next page
       </button>
       {status === "loading" && <div>Loading data...</div>}
