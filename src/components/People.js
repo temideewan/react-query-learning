@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
-import Planet from "./Planet";
 import Person from "./Person";
 
 const fetchPeople = async () => {

@@ -5,7 +5,7 @@ import Planet from "./Planet";
 const fetchPlanets = async ({ queryKey }) => {
   const page = queryKey[1];
   const res = await fetch(
-    `https://www.swapi.tech/api/planets?page=1&limit=60`
+    `https://www.swapi.tech/api/planets?page=${page}&limit=60`
   );
   return res.json();
 };
