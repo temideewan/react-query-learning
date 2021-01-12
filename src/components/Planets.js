@@ -14,8 +14,7 @@ const Planets = () => {
   const [page, setPage] = useState(1);
   const { data, status } = useQuery(["planets", 1], fetchPlanets, {
     staleTime: 2000,
-    cacheTime: 10,
-    keepPreviousData: true,
+    
     onSuccess: () => console.log("data has been fetched successfully bruh"),
   });
   console.log(data);
@@ -50,7 +49,7 @@ const Planets = () => {
               const lowerLimit = 10 * (page - 1);
               return index >= lowerLimit && index < upperLimit;
             })
-            .map((planet, index) => (
+            .map((planet) => (
               <Planet
                 key={planet.name}
                 planet={{ name: planet.name, url: planet.url }}

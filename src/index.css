@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
 }
 h1{
-  color: #ffff57;
+  color: #ffdc60;
   font-size: 4em;
   letter-spacing: 2px;
 }
@@ -45,7 +45,7 @@ button:hover{
 }
 .card h3{
   margin: 10px 0;
-  color: #ffff57;
+  color: #ffdc60;
 }
 button:disabled{
   opacity: 0.2;
